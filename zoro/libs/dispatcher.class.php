@@ -13,7 +13,10 @@ class Dispatcher{
 
 	public function setRequest($request=''){
 		if(null == $request){
-			$this->_request = $_SERVER['REQUEST_URI'];
+			if(empty($_SERVER['PATH_INFO'])){
+				$_SERVER['PATH_INFO'] = C::$config['default']['controller'].'/'.C::$config['default']['action'];
+			}
+			$this->_request = $_SERVER['PATH_INFO'];
 		}else{
 			$this->_request = $request;
 		}

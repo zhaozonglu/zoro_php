@@ -5,7 +5,7 @@
 	 */
 	function load_class($name){
 		$info = explode('/', $name);
-		require ZORO_PATH.DIRECTORY_SEPARATOR.$info[0].DIRECTORY_SEPARATOR.$info[1].'.class.php';
+		require ZORO_PATH.$info[0].DIRECTORY_SEPARATOR.$info[1].'.class.php';
 		$c_name = ucfirst($info[1]);
 		return new $c_name;
 	}
