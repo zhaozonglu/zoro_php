@@ -1,6 +1,6 @@
 <?php
 /**
- * 入口文件
+ * 入口文件test
  */
 define('ROOT_PATH', dirname(__FILE__));
 define('APP_PATH', ROOT_PATH.DIRECTORY_SEPARATOR.'app/');
